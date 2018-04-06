@@ -1,0 +1,25 @@
+<%- include header %>
+<% if(!posts){ %>
+    <div class="content-post-section">
+       <form method="post" >
+        section:<br/>
+        <input type="text" name="title"><br/>
+        title:<br/>
+        <textarea name="post" rows="20" cols="90"></textarea><br/>
+        <input type="submit" value="submit">
+        </form>
+       </div>
+     </div>
+<% }else{ %>
+      <div class="content-post-section">
+           <form method="post" >
+            section:<br/>
+            <input type="text" name="title" value=<%= posts[0].title%> disabled><br/>
+            title:<br/>
+            <textarea name="post" rows="20" cols="90"><%= posts[0].post.replace(/<br\/>/g,'\r\n') %></textarea><br/>
+            <input type="submit" value="submit">
+            </form>
+           </div>
+         </div>
+<% } %>
+<%-  include footer %>

@@ -1,0 +1,19 @@
+<%- include header %>
+   <div class="content-reg-section">
+   <% if(success){ %>
+   <div><%= success %>
+   <% }%>
+   <% if(error){ %>
+   <div><%= error %></div>
+   <% } %>
+    <form method="post" action="/reg">
+     <p>用户注册</p>
+     <input type="text" name="name" placeholder="input name" id="name_input">
+     <input type="text" name="email" placeholder="input email" id="email_input">
+
+     <input type="password" name="password" placeholder="create password">
+     <input type="password" name="password-repeat" placeholder="re enter password">
+     <button type="submit">注   册</button>
+     </form>
+    </div>
+    <%- include footer %>
